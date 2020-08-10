@@ -1,0 +1,86 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body
+{
+    height: 100%; /* needed for proper layout */
+}
+
+body 
+{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.mat-button-toggle-label-content 
+{
+    line-height: 25px !important;
+}
+
+.info 
+{ 
+    padding: 6px 8px; 
+    font: 14px/16px Arial, Helvetica, sans-serif; 
+    background: white; 
+    background: rgba(255,255,255,0.8); 
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+    border-radius: 5px; 
+} 
+    
+.info h4 
+{ 
+    margin: 0 0 5px; 
+    color: #777; 
+}
+
+.legend 
+{ 
+    text-align: left; line-height: 18px; color: #555; 
+} 
+
+.legend i 
+{ 
+    width: 18px; 
+    height: 18px; 
+    float: left; 
+    margin-right: 8px; 
+    opacity: 0.7; 
+}
+
+.mapBtn
+{
+  width: 100px;
+}
+
+@media  (min-device-width: 900px)
+{
+    .worldMapLegendTitle
+    {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+@media  (min-device-width: 300px) and (max-device-width: 500px) and (orientation: portrait)
+{
+    .worldMapLegendTitle
+    {
+        font-weight: bold;
+        font-size: 5vw;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-device-width: 400px) and (max-device-width: 900px) and (orientation: landscape) 
+{
+    .worldMapLegendTitle
+    {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}

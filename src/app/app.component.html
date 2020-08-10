@@ -1,0 +1,90 @@
+<div [style.width.%]="showOverlay ? 50 : 0" (click)="showOverlay = false" class="overlay">
+  <div class="overlay-content">
+    <a href="#" (click)="setLink('about')">About</a>
+    <a href="#" (click)="setLink('dashboard')">Dashboard</a>
+  </div>
+</div>
+
+<div class="page">
+  <mat-toolbar color="primary" class="page-header">
+    <button class="toolbarButton" (click)="showOverlay = true"><img src="./assets/icons/patient.svg" class="buttonPic"></button>
+    <div class="app-title">Angular Corona Dashboard</div>
+  </mat-toolbar>
+
+  <div class="page-content">
+    <div [style.display]="showAbout ? 'flex': 'none'" class="about-page">
+      <div class="aboutTitle">Angular Corona Dashboard</div>
+      <div class="aboutBody">
+        <div>By</div>
+        <div>Abdur Raafay Khan</div>
+        <div>Released under GPL v3</div>
+        <div>Data source</div>
+        <div>https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai</div>
+        <div>https://api.covid19api.com/summary</div>
+      </div>
+    </div>
+    
+    <div [ngClass]="showAbout ? 'dashBoardNone' : 'dashBoard'">
+      <div class="stats1">
+        <div class="stats-title">World</div>
+        <div class="stats-subtitle">Confirmed</div>
+        <div>{{World_Confirmed | number:'1.0':'en-US'}}</div>
+        <div class="stats-subtitle">Recovered</div>
+        <div>{{World_Recovered | number:'1.0':'en-US'}}</div>
+        <div class="stats-subtitle">Deaths</div>
+        <div>{{World_Deaths | number:'1.0':'en-US'}}</div>
+        <div class="stats-subtitle">Fatality rate</div>
+        <div>{{World_FatalityRate | number:'0.1-2'}} %</div>
+      </div>
+  
+      <div class="dropdownselector">
+        <mat-form-field>
+          <mat-label>Country</mat-label>
+          <mat-select [(ngModel)]="selected_country" >
+            <mat-option (click)="onCountrySelected(cntry)" *ngFor="let cntry of country_names" [value]="cntry[1]">
+              {{cntry[1]}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+      <div class="stats2">
+        <div class="stats-title">Country</div>
+        <div class="stats-subtitle">Confirmed</div>
+        <div>{{Region_Confirmed | number:'1.0':'en-US'}}</div>
+        <div class="stats-subtitle">Recovered</div>
+        <div>{{Region_Recovered | number:'1.0':'en-US'}}</div>
+        <div class="stats-subtitle">Deaths</div>
+        <div>{{Region_Deaths | number:'1.0':'en-US'}}</div>
+        <div class="stats-subtitle">Fatality rate</div>
+        <div>{{Region_FatalityRate | number:'0.1-2'}} %</div>      
+      </div>
+
+      <div id="worldMapID"></div>
+
+      <div class="top10">
+        <div>
+          <mat-button-toggle-group>
+            <mat-button-toggle value="confirmed" (change)="setDonutChartDataSource($event)">Confirmed</mat-button-toggle>
+            <mat-button-toggle value="dead" (change)="setDonutChartDataSource($event)">Deaths</mat-button-toggle>
+            <mat-button-toggle value="recovered" (change)="setDonutChartDataSource($event)">Recovered</mat-button-toggle>
+          </mat-button-toggle-group>  
+        </div>
+        <canvas id="worldtop10DonutGraph" #worldTop10DonutGraph></canvas>
+      </div>
+
+      <div class="linegraph">
+        <div>
+          <mat-button-toggle-group>
+            <mat-button-toggle value="linear" (change)="setLineGraphYAxisType($event)">Linear</mat-button-toggle>
+            <mat-button-toggle value="logarithmic" (change)="setLineGraphYAxisType($event)">Logarithmic</mat-button-toggle>
+          </mat-button-toggle-group>  
+        </div>
+        <div>{{lineGraphTitle}}</div>
+        <div id="worldlineGraphOuterDiv">
+          <canvas id="worldlineGraph" style="width: 100%; height: 100%;" #worldLineGraph></canvas>
+        </div>
+      </div>        
+    </div>
+  </div>
+</div>

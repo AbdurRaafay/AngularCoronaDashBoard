@@ -1,0 +1,516 @@
+.page-header 
+{
+    width: 100%;
+    position: fixed;
+    flex: 0 0 auto;
+    z-index: 2000;
+}
+
+.overlay 
+{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content 
+{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.overlay a 
+{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.overlay a:hover, .overlay a:focus 
+{
+    color: #f1f1f1;
+}
+
+.dashBoardNone
+{
+    display: none;
+}
+
+@media (min-device-width: 900px) 
+{
+    .about-page
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutTitle
+    {
+        margin-top: 10vh;
+        font-size: 3rem;
+    }
+
+    .aboutBody
+    {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .app-title
+    {
+        margin-left: 5px;
+    }
+
+    .page-header
+    {
+        height: 50px;
+    }
+
+    .toolbarButton
+    {
+        height: 40px;
+    }
+    
+    .buttonPic
+    {
+        height: 35px;
+        width: 30px;
+    }
+
+    .page 
+    {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .page-content
+    {
+        margin-top: 55px;
+        overflow-y: hidden;
+    }    
+    
+    .dashBoard 
+    {
+        height: 95vh;
+        width: 99vw;
+        margin-left: 5px;
+        display: grid;
+        grid-template-columns: repeat(40, 1fr);
+        grid-template-rows: repeat(40, 1fr);
+        grid-gap: 5px;
+    }
+
+    #worldMapID
+    {
+      grid-column-start: 1;
+      grid-column-end: 25;
+      grid-row-start: 1;
+      grid-row-end: 19;
+    }
+    
+    .top10 
+    {
+      grid-column-start: 25;
+      grid-column-end: 41;
+      grid-row-start: 19;
+      grid-row-end: 40;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .stats1 
+    {
+      border-radius: 25px;
+      grid-column-start: 25;
+      grid-column-end: 33;
+      grid-row-start: 1;
+      grid-row-end: 18;
+      background-color: grey;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .stats2 
+    {
+      border-radius: 25px;
+      grid-column-start: 33;
+      grid-column-end: 41;
+      grid-row-start: 1;
+      grid-row-end: 18;
+      background-color: grey;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;  
+    }
+    
+    .stats-title
+    {
+      font-size: 2rem;
+    }
+    
+    .stats-subtitle
+    {
+      font-size: 1.5rem;
+    }
+    
+    .dropdownselector 
+    {
+        grid-column-start: 25;
+        grid-column-end: 40;
+        grid-row-start: 18;
+        grid-row-end: 19;
+        display: flex;
+        justify-content: center;
+    }
+    
+    mat-form-field
+    {
+        width: 20vw;
+    }
+    
+    .linegraph 
+    {
+      grid-column-start: 1;
+      grid-column-end: 25;
+      grid-row-start: 19;
+      grid-row-end: 40;
+      display: flex;
+      flex-direction: column;
+      align-items: center;  
+    }
+
+    #worldlineGraphOuterDiv
+    {
+        width: 95%;
+        height: 90%;
+    }
+}
+
+@media (min-device-width: 300px) and (max-device-width: 500px) and (orientation: portrait)
+{
+    .about-page
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutTitle
+    {
+        width: 100%;
+        margin-top: 10vh;
+        font-weight: bold;
+    }
+
+    .aboutBody
+    {
+        width: 100%;
+    }
+
+    .page-header
+    {
+        height: 8vh;
+    }
+
+    .toolbarButton
+    {
+        height: 5vh;
+    }
+    
+    .buttonPic
+    {
+        height: 4vh;
+        width: 4vh;
+    }
+
+    .page 
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .page-content
+    {
+        margin-top: 9vh;
+    }    
+
+    .toolbarButton
+    {
+        border-radius:0px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .app-title
+    {
+        margin-left: 1rem;
+    }
+
+    .dashBoard 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      
+    #worldMapID
+    {
+        margin-bottom: 20px;
+        width: 90vw;
+        height: 90vw;
+    }
+    
+    .top10 
+    {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #worldtop10DonutGraph
+    {
+        width: 195vw;
+    }
+
+    .stats1 
+    {
+        width: 90vw;
+        border-radius: 25px;
+        background-color: grey;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stats2 
+    {
+        margin-bottom: 2vh;
+        width: 90vw;
+        border-radius: 25px;
+        background-color: grey;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stats-title
+    {
+      font-size: 3rem;
+    }
+    
+    .stats-subtitle
+    {
+      font-size: 1.5rem;
+    }
+    
+    .dropdownselector 
+    {
+        display: flex;
+        justify-content: center;
+    }
+    
+    mat-form-field
+    {
+        width: 70vw;
+    }
+    
+    .linegraph 
+    {
+        width: 90vw !important;
+        height: 190vw !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+
+    #worldlineGraphOuterDiv
+    {
+        width: 90vw;
+        height: 90vw;
+    }
+}
+
+@media (min-device-width: 400px) and (max-device-width: 900px) and (orientation: landscape) 
+{
+    .about-page
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutTitle
+    {
+        width: 100%;
+        margin-top: 10vh;
+        font-weight: bold;
+    }
+
+    .aboutBody
+    {
+        width: 100%;
+    }
+
+    .page-header
+    {
+        height: 50px;
+    }
+
+    .toolbarButton
+    {
+        height: 50px;
+    }
+    
+    .buttonPic
+    {
+        height: 40px;
+        width: 40px;
+    }
+
+    .page 
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .page-content
+    {
+        margin-top: 60px;
+    }    
+
+    .toolbarButton
+    {
+        border-radius:0px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .app-title
+    {
+        margin-left: 1rem;
+    }
+
+    .dashBoard 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      
+    #worldMapID
+    {
+        margin-bottom: 20px;
+        width: 90vw;
+        height: 90vw;
+    }
+    
+    .top10 
+    {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #worldtop10DonutGraph
+    {
+        width: 95vw;
+    }
+
+    .stats1 
+    {
+        width: 50vw;
+        border-radius: 25px;
+        background-color: grey;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stats2 
+    {
+        margin-bottom: 2vh;
+        width: 50vw;
+        border-radius: 25px;
+        background-color: grey;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stats-title
+    {
+      font-size: 3rem;
+    }
+    
+    .stats-subtitle
+    {
+      font-size: 1.5rem;
+    }
+    
+    .dropdownselector 
+    {
+        display: flex;
+        justify-content: center;
+    }
+    
+    mat-form-field
+    {
+        margin-top: 5px;
+        width: 50vw;
+    }
+    
+    .linegraph 
+    {
+        width: 90vw !important;
+        height: 190vw !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
+
+    #worldlineGraphOuterDiv
+    {
+        width: 90vw;
+    }
+}
