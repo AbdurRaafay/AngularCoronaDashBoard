@@ -114,6 +114,7 @@
     
     .dashBoard 
     {
+        max-height: 95vh;
         height: 95vh;
         width: 99vw;
         margin-left: 5px;
@@ -210,6 +211,11 @@
     {
         width: 95%;
         height: 90%;
+    }
+
+    .comparisonPage
+    {
+        display: flex;
     }
 }
 
@@ -512,5 +518,6 @@
     #worldlineGraphOuterDiv
     {
         width: 90vw;
+        height: 90vw;
     }
 }

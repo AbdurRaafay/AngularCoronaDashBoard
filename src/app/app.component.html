@@ -19,12 +19,11 @@
         <div>Abdur Raafay Khan</div>
         <div>Released under GPL v3</div>
         <div>Data source</div>
-        <div>https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai</div>
         <div>https://api.covid19api.com/summary</div>
       </div>
     </div>
-    
-    <div [ngClass]="showAbout ? 'dashBoardNone' : 'dashBoard'">
+
+    <div [ngClass]="showDashboard ? 'dashBoard' : 'dashBoardNone'">
       <div class="stats1">
         <div class="stats-title">World</div>
         <div class="stats-subtitle">Confirmed</div>
