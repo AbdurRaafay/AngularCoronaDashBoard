@@ -99,8 +99,6 @@ export class AppComponent implements OnInit, AfterViewInit
       { label: "Recovered", data: [], fill: false, borderColor: 'green' }]
   };
 
-  @ViewChild('comparisonComponentContainer', {read: ViewContainerRef}) comparisonContainer: ViewContainerRef;
-
   @ViewChild('worldMapDiv', { read: ViewContainerRef }) worldMapCntr: ViewContainerRef;
   wMPC: Array<string> = ['#FF0000', '#FF7B00', '#FFAF00', '#FFE400', '#E5FF00', '#B0FF00', '#7CFF00', '#00FF00'];// World map color palette red -> yellow -> green 
 
