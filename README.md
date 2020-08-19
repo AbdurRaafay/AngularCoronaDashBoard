@@ -8,8 +8,7 @@ AngularCoronaDashboard is a dashboard showing global trends in the ongoing COVID
 
 ## Live Demo
 
-http://github.com - automatic!
-[GitHub](http://github.com)
+https://abdurraafay.github.io/AngularCoronaDashboard
 [](https://abdurraafay.github.io/AngularCoronaDashboard)
 
 ## Dependencies
