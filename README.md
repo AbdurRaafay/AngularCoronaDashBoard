@@ -1,6 +1,9 @@
 # AngularCoronaDashboard
 
-AngularCoronaDashboard is a dashboard showing global trends in the ongoing COVID-19 pandemic.
+* World map showing global trends
+* Donut graph for top 10 countries 
+* Linear and logarithmic chart for individual countries selected from dropdown 
+* World and selected country statistics summary
 
 ## Demo
 
