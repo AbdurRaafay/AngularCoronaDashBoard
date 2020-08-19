@@ -8,11 +8,15 @@ AngularCoronaDashboard is a dashboard showing global trends in the ongoing COVID
 
 ## Live Demo
 
+http://github.com - automatic!
+[GitHub](http://github.com)
 [](https://abdurraafay.github.io/AngularCoronaDashboard)
 
 ## Dependencies
-@angular/cdk@^9.2.4
-@angular/material@^9.2.4
+* angular/cdk 9.2.4
+* angular/material 9.2.4
+* chart.js 2.9.3
+* leaflet 1.6.0
 
 ## Development server
 
